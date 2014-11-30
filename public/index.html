@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="game page">
+      <span data-bind="text: hello"></span>
+      <ul data-bind="foreach: ships">
+        <li>
+          (<span data-bind="text: data.username"></span>)
+          xpos: <span data-bind="text: data.xPos"></span>
+          ypos: <span data-bind="text: data.yPos"></span>
+        </li>
+      </ul>
+      
+    </div>
+    <div class="login page">
+      <div class="form">
+        <h3 class="title">What's your nickname?</h3>
+        <input data-bind="value: username" type="text" maxlength="14" />
+        <button data-bind="click: registerUsername">Log In</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+    <script src="/main.js"></script>
+
+  </body>
+</html>
